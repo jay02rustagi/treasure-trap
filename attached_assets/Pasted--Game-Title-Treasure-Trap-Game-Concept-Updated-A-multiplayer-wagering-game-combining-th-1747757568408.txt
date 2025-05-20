@@ -1,0 +1,122 @@
+🎮 Game Title: Treasure Trap
+
+⸻
+
+🧠 Game Concept (Updated)
+
+A multiplayer wagering game combining the strategic depth of poker with the randomness and risk-reward mechanics of trap-laden treasure hunting. Players take turns wagering and selecting a cell from a shared 5x5 board filled with hidden traps (set by all players) and one treasure.
+
+⸻
+
+👥 Players
+	•	Minimum: 2
+	•	Maximum: 6
+
+⸻
+
+🧱 Game Board (Shared)
+	•	One common 5x5 board (25 cells total) is used for every match.
+	•	Each player places X traps during the trap phase:
+	•	X = floor(25 / (2 × number of players))
+	•	All players place their traps simultaneously on the shared board.
+	•	If 2+ players place traps on the same cell, the trap is not duplicated — it remains a single trap.
+	•	1 treasure is randomly placed by the system after trap placement is locked.
+	•	Remaining cells are bluffs.
+
+⸻
+
+🧨 Trap Placement Phase
+	•	Each player gets 30 seconds to place X traps on the shared board.
+	•	Traps are placed privately (others can’t see where you’re placing).
+	•	If a player doesn’t finish in 30s, the system auto-places their traps randomly.
+	•	After trap placement:
+	•	System randomly places 1 treasure in a non-trap cell.
+	•	Traps are now locked, and hidden to all players.
+
+⸻
+
+💰 Game Economy
+	•	All new players receive 500 coins as a free in-game bonus.
+	•	One active table available at launch:
+	•	Buy-in: 10 coins
+	•	Minimum bet per hand: 1 coin (1/10th of buy-in)
+	•	Buy-in is locked for the match.
+
+⸻
+
+🎮 Gameplay Mechanics
+
+🔄 Game Rounds (Hands)
+
+Each round (or hand) plays as follows:
+	1.	Wager Turn (Poker-style):
+	•	Players take turns in clockwise order.
+	•	Actions:
+	•	Check – If no raise has occurred.
+	•	Raise – Up to 10x previous bet.
+	•	Fold – Exit the round and forfeit your wager to the pot.
+	•	Every player must at least match the current bet to stay in.
+	2.	Cell Selection (after betting):
+	•	Each active (non-folded) player chooses 1 cell from the shared board.
+	•	Outcomes:
+	•	Trap → Player is eliminated from the hand and loses entire wager to the pot.
+	•	Bluff → Player stays in, wager added to pot.
+	•	Treasure → Player wins the entire pot immediately. Round ends.
+	3.	Round End Conditions:
+	•	Treasure Found: Player wins pot; new round begins.
+	•	All but one folded or hit traps: Last player standing wins pot.
+	•	Board Exhausted (all 25 cells picked): Pot is split among remaining players.
+
+⸻
+
+📦 Pot Management
+	•	Pot consists of:
+	•	All wagers from this hand.
+	•	Wagers from folded or eliminated players.
+	•	Entire pot is given to the winner of the round.
+
+⸻
+
+🕹️ Turn Timers & Defaults
+	•	Trap Placement: 30 seconds (auto-place if missed)
+	•	Player Turn: 30 seconds to act (auto-fold if inactive)
+
+⸻
+
+🛡️ Trap Conflict Rules
+	•	If multiple players choose the same cell for trap placement:
+	•	It is counted as a single trap.
+	•	This encourages strategy — e.g. guessing what others might do.
+
+⸻
+
+🏆 Win Conditions
+	•	A player wins the round by:
+	•	Finding the treasure.
+	•	Being the last player not folded or eliminated.
+	•	Game continues until:
+	•	Players leave voluntarily.
+	•	A session timeout ends the game.
+
+⸻
+
+📈 Replayability & Strategy
+	•	Players will develop meta-strategies:
+	•	Where to place traps based on psychology.
+	•	Reading betting behavior like in poker.
+	•	Calculated risks: Do you reveal a cell early or let others test the waters?
+	•	Future Features (Optional):
+	•	Leaderboards
+	•	Private tables
+	•	Higher-stake boards
+	•	Power-ups (e.g. detect nearby traps)
+
+⸻
+
+🔮 Example Flow (3 Players)
+	1.	Players place 4 traps each → 12 traps max (but overlaps reduce real trap count)
+	2.	System places 1 treasure in a non-trap cell.
+	3.	Player A raises to 3 coins, B checks, C folds.
+	4.	A selects (2,2) — it’s a bluff, stays in.
+	5.	B selects (1,4) — it’s a trap, eliminated.
+	6.	Next round, A and C continue.
