@@ -98,8 +98,7 @@
     "tsx": "^4.19.1",
     "typescript": "5.6.3",
     "vite": "^5.4.14",
-    "@remix-run/dev": "latest",
-    "other-package": "version"
+    "@remix-run/dev": "latest"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
